@@ -26,23 +26,25 @@ class SignUp extends React.Component {
         {
             alert("passwords don't match");
         }
-
-        try{
-            const {user } = await auth.createUserWithEmailAndPassword(
-                email, 
-                password
-            );
-            
-            await createUserProfileDocument(user, {displayName});           
-            //clear form
-            this.setState({
-                displayName: '',
-                email: '',
-                password: '',
-                confirmPassword: ''
-            });
-        } catch(error){
-            console.error(error);
+        else
+        {
+            try{
+                const {user } = await auth.createUserWithEmailAndPassword(
+                    email, 
+                    password
+                );
+                
+                await createUserProfileDocument(user, {displayName});           
+                //clear form
+                this.setState({
+                    displayName: '',
+                    email: '',
+                    password: '',
+                    confirmPassword: ''
+                });
+            } catch(error){
+                console.error(error);
+            }
         }
     };
 

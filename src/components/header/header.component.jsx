@@ -43,7 +43,7 @@ const Header = ({currentUser}) => (
                 className='option'
                 to='/shop'
             >
-                SHOP
+                CART
             </Link>
 
         </div>

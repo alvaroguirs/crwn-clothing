@@ -35,8 +35,9 @@ const config = {
       }
       
     }
+    
     return userRef;
-    console.log(snapShot);
+    
   };
 
   firebase.initializeApp(config);
